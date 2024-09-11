@@ -79,7 +79,8 @@
 <br>
 
 ## 스터디 자료
-모든 개발자를 위한 HTTP 웹 기본 지식
-https://inf.run/8ZEU8
-스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술 
-https://inf.run/Gmptq
+-모든 개발자를 위한 HTTP 웹 기본 지식
+  -https://inf.run/8ZEU8
+  
+-스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술 
+  -https://inf.run/Gmptq
