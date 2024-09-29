@@ -21,9 +21,19 @@ public class HelloServlet extends HttpServlet {
         String username = request.getParameter("username"); // 쿼리 파라미터를 쉽게 읽도록
         System.out.println("username = " + username);
 
+        String age = request.getParameter("age"); // 쿼리 파라미터 확장 age(나이)
+        System.out.println("age = " + age);
+
+        String studentId = request.getParameter("studentId"); // 쿼리 파라미터 확장 studentId(학번)
+        System.out.println("studentId = " + studentId);
+
+        String major = request.getParameter("major"); // 쿼리 파라미터 확장 major(전공)
+        System.out.println("major = " + major);
+
         // 응답 메시지 생성 (HttpServletResponse) 값을 넣으면 메시지에 데이터가 담김
         response.setContentType("text/plain"); // content 헤더 정보에 데이터 들어감
         response.setCharacterEncoding("utf-8"); // 헤더 정보에 데이터 들어감
-        response.getWriter().write("hello" + username); //getWriter는 바디에 데이터 들어감
+        response.getWriter().write("hello I am " + username + ", " + age + " years old. and my student Id is " + studentId + " my major is " + major); //getWriter는 바디에 데이터 들어감
+        //localhost:8082/hello?username=Lee&age=21&studentId=2313638&major=computer
     }
 }
