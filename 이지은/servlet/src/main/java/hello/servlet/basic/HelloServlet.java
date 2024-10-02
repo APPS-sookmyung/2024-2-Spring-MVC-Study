@@ -19,6 +19,14 @@ public class HelloServlet extends HttpServlet {
         String username = request.getParameter("username");
         System.out.println("username = " + username);
 
+        String age = request.getParameter("age");
+        String studentId = request.getParameter("studentId");
+        String major = request.getParameter("major");
+
+        System.out.println("age = " + age);
+        System.out.println("studentId = " + studentId);
+        System.out.println("major = " + major);
+
         response.setContentType("text/plain");
         response.setCharacterEncoding("utf-8");
         response.getWriter().write("hello" + username);
