@@ -12,7 +12,6 @@ import java.io.IOException;
 
 @WebServlet(name = "helloServlet", urlPatterns = "/hello")
 public class HelloServlet extends HttpServlet {
-    /*
     @Override
     public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
         System.out.println("HelloServlet.service");
@@ -20,29 +19,12 @@ public class HelloServlet extends HttpServlet {
         System.out.println("response = " + response);
 
         String username = request.getParameter("username");
-        System.out.println("username = " + username);
+        System.out.println("username = " + username);;
 
-        String age = request.getParameter("age");
-        String studentId = request.getParameter("studentId");
-        String major = request.getParameter("major");
-
-        System.out.println("age = " + age);
-        System.out.println("studentId = " + studentId);
-        System.out.println("major = " + major);
-
-        response.setContentType("application/json");
+        response.setContentType("text/plain");
         response.setCharacterEncoding("utf-8");
         response.getWriter().write("hello" + username);
 
     }
 
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String age = request.getParameter("age");
-
-        System.out.println("age = " + age);
-        response.setContentType("text/plain");
-        response.getWriter().write("hello" + age);
-    }
 }
