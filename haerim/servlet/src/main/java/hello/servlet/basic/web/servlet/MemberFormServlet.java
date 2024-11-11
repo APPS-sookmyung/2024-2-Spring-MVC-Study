@@ -16,8 +16,8 @@ public class MemberFormServlet extends HttpServlet {
     private MemberRepository memberRepository = MemberRepository.getInstance();
     // private로 막아놨기 때문에 new를 쓸 수 없음
 
-   // @Override 전 왜 이걸쓰면 오류가 날까요,,,
-   protected void servlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+   @Override
+   protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        //http 응답에 html이 나가도록 content body를 잡을거임
        response.setContentType("text/html");
        response.setCharacterEncoding("utf-8");
