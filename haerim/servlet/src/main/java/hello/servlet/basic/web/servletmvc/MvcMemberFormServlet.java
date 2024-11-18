@@ -13,9 +13,9 @@ import java.io.IOException;
 @WebServlet(name = "MvcMemberFormServlet", urlPatterns = "/servlet-mvc/members/new-form")
 public class MvcMemberFormServlet extends HttpServlet {
 
-    // @Override 왜 나는 오류가 나냐고
+    @Override
     // 고객 요청이 오면 이 메소드가 호출됨.
-    protected void servlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         String viewPath = "/WEB-INF/views/new-form.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath); //컨트롤러에서 뷰로 이동할 때 사용하는 것
         // viewPath 경로를 다시 호출
